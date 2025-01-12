@@ -12,10 +12,10 @@ app = Flask(__name__)
 
 # Load the necessary files
 lemmatizer = WordNetLemmatizer()
-model = load_model(r'E:\Edunet Internship\my_chatbot\chatbot_model.h5')
-intents = json.loads(open(r'E:\Edunet Internship\my_chatbot\intents.json').read())
-words = pickle.load(open(r'E:\Edunet Internship\my_chatbot\words.pkl', 'rb'))
-classes = pickle.load(open(r'E:\Edunet Internship\my_chatbot\classes.pkl', 'rb'))
+model = load_model('chatbot_model.h5')
+intents = json.loads(open('intents.json').read())
+words = pickle.load(open('words.pkl', 'rb'))
+classes = pickle.load(open('classes.pkl', 'rb'))
 
 def clean_up_sentence(sentence):
     """
