@@ -14,7 +14,7 @@ words = []
 classes = []
 documents = []
 ignore_words = ['?', '!']
-data_file = open(r'E:\Edunet Internship\my_chatbot\intents.json').read()
+data_file = open('intents.json').read()
 intents = json.loads(data_file)
 
 # Tokenize patterns, build words and classes
@@ -38,8 +38,8 @@ print(len(classes), "classes", classes)
 print(len(words), "unique lemmatized words", words)
 
 # Save the words and classes to pickle files
-pickle.dump(words, open(r'E:\Edunet Internship\my_chatbot\words.pkl', 'wb'))
-pickle.dump(classes, open(r'E:\Edunet Internship\my_chatbot\classes.pkl', 'wb'))
+pickle.dump(words, open('words.pkl', 'wb'))
+pickle.dump(classes, open('classes.pkl', 'wb'))
 
 # Create training data
 training = []
@@ -88,5 +88,5 @@ model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy
 
 # Train and save the model
 hist = model.fit(train_x, train_y, epochs=200, batch_size=5, verbose=1)
-model.save(r'E:\Edunet Internship\my_chatbot\chatbot_model.h5')
+model.save('chatbot_model.h5')
 
