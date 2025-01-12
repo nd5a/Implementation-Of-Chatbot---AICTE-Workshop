@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Dhruvil Nakrani | Chatbot" />
+    <meta
+      name="google-site-verification"
+      content="ZfPW4PegFJFsfwqEY9xvFaCW-xYkJRjF2tyvz9Lty3s"
+    />
+    <meta
+      name="description"
+      content="Chat with our interactive chatbot! Get instant answers, assistance, and personalized responses. Perfect for support, FAQs, and more."
+    />
+    <meta
+      name="Keywords"
+      content="Dhruvil Nakrani,DN Chatbot, Dhruvil Chatbot, Dhruvil Nakrani Chatbot, DN Portfolio, Dhruvil Frontend Engineer, Dhruvil Backend Engineer, Dhruvil Python Developer, Technical Writer DN, Technical Writer Dhruvil Nakrani, Web Developer India, User Interface Designer, UI/UX Specialist, JavaScript Developer, HTML/CSS Expert, React Developer, Passionate Coder, Problem Solver, Creative Thinker, Software Developer, Communication Skills, Dhruvil Programmer, Innovative Web Solutions, India Developer, Freelance Frontend Engineer,
+      Dhruvil Nakrani Resume, DN, JavaScript and React Developer Dhruvil,Dhruvil Nakrani Coding Tutorials,Creative Developer India,India-Based Developer Dhruvil, Full Stack Expertise Dhruvil Nakrani, React.js Developer Dhruvil Nakrani, Python Web Solutions Dhruvil, Portfolio Developer Dhruvil Nakrani, HTML/CSS Projects Dhruvil, Freelance Programming Dhruvil Nakrani, Dhruvil Nakrani UI Designs, Problem Solving Skills Dhruvil, Software Solutions India Dhruvil, Technical Writing Portfolio Dhruvil,
+Coding Projects Dhruvil Nakrani,
+Dhruvil Nakrani Frontend Tutorials,
+Backend Skills Dhruvil Nakrani,
+Dhruvil Nakrani React.js Portfolio,
+Passionate Programmer India,
+Innovative Web Design Dhruvil Nakrani,
+Freelance Coder Dhruvil,
+Full Stack Development India,
+User Interface Designer Dhruvil,
+Problem Solving Portfolio Dhruvil Nakrani,
+Software Design India Dhruvil,
+Dhruvil Nakrani Problem Solving Skills,
+Web Application Developer Dhruvil,
+Frontend Frameworks Expertise Dhruvil,
+Backend Frameworks Dhruvil Nakrani,
+Full Stack Freelancer Dhruvil,
+UI/UX Expertise India Dhruvil,
+Passionate Software Engineer Dhruvil,
+HTML/CSS Guru Dhruvil Nakrani,
+JavaScript Specialist Dhruvil Nakrani,
+Python Expertise Dhruvil Nakrani,
+Dhruvil Nakrani Freelance Engineer,
+India Python Developer Dhruvil Nakrani,
+Frontend Guru Dhruvil Nakrani,
+Backend Problem Solver Dhruvil Nakrani,
+Creative UI Designs Dhruvil Nakrani,
+Software Development Tutorials Dhruvil,
+India Freelance Engineer Dhruvil Nakrani,
+Technical Blog Writer Dhruvil Nakrani,
+Frontend Problem Solver Dhruvil,
+Freelance Developer Dhruvil Nakrani,
+Python Solutions Dhruvil Nakrani,
+Full Stack Problem Solver Dhruvil Nakrani,
+Software Engineer Portfolio Dhruvil Nakrani, Dhruvil Nakrani Instagram, Dhruvil Nakrani Facebook, Dhruvil Nakrani Photo, Dhruvil Nakrani LinkedIn"
+    />
+    <link rel="icon" type="image/png" href="/static/assets/download1.png" />
+    <title>DN - Chatbot</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(to right, #4facfe, #00f2fe);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      /* Chatbox Container */
+      .chatbox {
+        width: 400px;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: #fff;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+
+      /* Chatbox Header (Title and Welcome Message) */
+      .chatbox-header {
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        border-bottom: 2px solid #ddd;
+      }
+
+      .chatbox-header h1 {
+        font-size: 20px;
+        margin: 0;
+        padding: 5px 0;
+      }
+
+      .chatbox-header .welcome-message {
+        font-size: 14px;
+        margin-top: 5px;
+      }
+
+      /* Messages Section */
+      .messages {
+        height: 300px;
+        overflow-y: auto;
+        padding: 15px;
+        background-color: #f7f7f7;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      /* Message Styling */
+      .messages div {
+        padding: 8px 12px;
+        border-radius: 15px;
+        max-width: 70%;
+        word-wrap: break-word;
+        animation: fadeIn 0.3s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* User Message (Right Side) */
+      .messages .user {
+        align-self: flex-end;
+        background-color: #007bff;
+        color: #fff;
+        text-align: right;
+      }
+
+      /* Bot Message (Left Side) */
+      .messages .bot {
+        align-self: flex-start;
+        background-color: #e9ecef;
+        color: #333;
+        text-align: left;
+      }
+
+      /* Input Section */
+      .input {
+        display: flex;
+        padding: 10px;
+        background-color: #fff;
+        border-top: 2px solid #ddd;
+      }
+
+      .input input {
+        flex: 1;
+        padding: 10px;
+        border-radius: 15px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+      }
+
+      .input input:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+
+      .input button {
+        padding: 10px 15px;
+        margin-left: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: transform 0.3s ease;
+      }
+
+      .input button:hover {
+        transform: scale(1.1);
+        background-color: #0056b3;
+      }
+
+      .input button:active {
+        background-color: #004085;
+      }
+
+      h1 {
+        color: #fff;
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+      .welcome-message {
+        color: #fff;
+        font-size: 18px;
+        margin-top: -20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chatbox">
+      <div align="center" class="chatbox-header">
+        <h1>DN Chatbot</h1>
+        <div class="welcome-message">Welcome! Let's chat.</div>
+      </div>
+      <div class="messages" id="messages"></div>
+      <div class="input">
+        <input type="text" id="userInput" placeholder="Type your message..." />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+
+    <script>
+      const botTypingSound = new Audio(
+        "https://assets.mixkit.co/sfx/download/mixkit-positive-notification-951.wav"
+      );
+      const userMessageSound = new Audio(
+        "https://assets.mixkit.co/sfx/download/mixkit-select-click-1109.wav"
+      );
+
+      function sendMessage() {
+        const userInput = document.getElementById("userInput").value;
+        const messages = document.getElementById("messages");
+
+        if (!userInput.trim()) return;
+
+        // Play user message sound
+        userMessageSound.play();
+
+        // Append user message
+        const userMsg = document.createElement("div");
+        userMsg.textContent = "You: " + userInput;
+        userMsg.classList.add("user");
+        messages.appendChild(userMsg);
+
+        // Show bot typing animation
+        const typingMsg = document.createElement("div");
+        typingMsg.textContent = "Bot is typing...";
+        typingMsg.classList.add("typing");
+        messages.appendChild(typingMsg);
+
+        messages.scrollTop = messages.scrollHeight; // Auto-scroll
+
+        // Simulate bot typing with delay
+        setTimeout(() => {
+          botTypingSound.play(); // Play bot typing sound
+          typingMsg.remove(); // Remove typing animation
+
+          // Fetch bot response
+          fetch(`/get?msg=${encodeURIComponent(userInput)}`)
+            .then((response) => response.text())
+            .then((data) => {
+              const botMsg = document.createElement("div");
+              botMsg.textContent = "Bot: " + data;
+              botMsg.classList.add("bot");
+              messages.appendChild(botMsg);
+              messages.scrollTop = messages.scrollHeight; // Auto-scroll
+            });
+        }, 1500); // Simulate typing for 1.5 seconds
+
+        // Clear input field
+        document.getElementById("userInput").value = "";
+      }
+    </script>
+  </body>
+</html>
